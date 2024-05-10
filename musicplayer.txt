@@ -1,0 +1,45 @@
+Type script of the music player :
+class Audio {
+    constructor(public name: string, public url: string, public ratings: number[] = []) {}
+    add Rating (rating: number) {
+        this. ratings. push(rating);
+    }
+
+    Calculate Average Rating(): number {
+        const sum = this. ratings. reduce((acc, rating) => acc + rating, 0);
+        return sum / this. ratings. length;
+    }
+
+    // Other methods for audio manipulation
+}
+
+class Playlist {
+    audios: Audio[] = [];
+
+    constructor(public name: string) {}
+
+    add Audio(audio: Audio) {
+        this. audios. push(audio);
+    }
+
+    // Other methods for playlist manipulation
+}
+
+class User {
+    playlists: Playlist[] = [];
+
+    constructor(public name: string) {}
+
+    create Playlist(name: string) {
+        const playlist = new Playlist(name);
+        this. playlists. push(playlist);
+    }
+
+    // Other methods for user manipulation
+}
+
+// Functions for dynamically generating HTML elements
+
+// Event listeners for user actions
+
+// Bootstrap integration and styling
